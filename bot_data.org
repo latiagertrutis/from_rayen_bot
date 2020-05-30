@@ -1,0 +1,11 @@
+* Bot credentials
+** Bot token                                                         :crypt:
+-----BEGIN PGP MESSAGE-----
+
+jA0EBwMCSCxmXUm1Qm7z0mUBSvFzT4+6HNARuePvrXf7sqW7wT4N4C8BCWw2600Y
+zrMHMry5VHhLYWohugVunht31ksqsCFiF+GYzi2s8u2Fe++bNodVk+cd2csYwJX9
+DJ7srUNuSSvvchqcqRosoXOLPNeANA==
+=FRbM
+-----END PGP MESSAGE-----
+** Bot address
+t.me/from_rayen_bot
