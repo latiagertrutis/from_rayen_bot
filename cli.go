@@ -33,7 +33,7 @@ func InitCli() *cli.App {
 			},
 		},
 		Action: func(c *cli.Context) error {
-			TelegramMain(c.String("token"))
+			InitBot(c.String("token"))
 			return nil
 		},
 	}

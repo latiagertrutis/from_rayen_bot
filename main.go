@@ -35,5 +35,15 @@ func main() {
 
 	app := InitCli()
 
-	app.Run(os.Args)
+	err := app.Run(os.Args)
+	if err != nil {
+		log.Error(err)
+		os.Exit(1)
+	}
+
+	err = TelegramMain()
+	if err != nil {
+		log.Error(err)
+		os.Exit(1)
+	}
 }
