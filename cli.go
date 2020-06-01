@@ -33,7 +33,10 @@ func InitCli() *cli.App {
 			},
 		},
 		Action: func(c *cli.Context) error {
-			InitBot(c.String("token"))
+			err := InitBot(c.String("token"))
+			if err != nil {
+				return err
+			}
 			return nil
 		},
 	}
