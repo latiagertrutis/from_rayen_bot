@@ -9,6 +9,8 @@
 package main
 
 import (
+	"fmt"
+
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 )
 
@@ -101,7 +103,7 @@ func MentionAllUsers(chatId int64) (tgbotapi.MessageConfig, error) {
 			if err != nil {
 				log.Warning(err)
 			}
-			mentions += "@" + chatMember.User.UserName + " "
+			mentions += fmt.Sprintf("[%s](tg://user?id=%d) ", chatMember.User.FirstName, chatMember.User.ID)
 		}
 	}
 	rows.Close()
@@ -121,6 +123,7 @@ func RouteUpdate(update tgbotapi.Update) error {
 			return err
 		}
 		m.ReplyToMessageID = update.Message.MessageID
+		m.ParseMode = "Markdown"
 		bot.Send(m)
 	}
 	return nil

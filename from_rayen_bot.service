@@ -1,0 +1,15 @@
+[Unit]
+Description=from_rayen_bot
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=pi
+WorkingDirectory=/home/pi/workspace/from_rayen_bot
+ExecStart=/home/pi/workspace/from_rayen_bot/launcher.sh
+
+[Install]
+WantedBy=multi-user.target
